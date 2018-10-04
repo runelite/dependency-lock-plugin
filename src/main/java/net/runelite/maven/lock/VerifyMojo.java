@@ -104,7 +104,7 @@ public class VerifyMojo extends AbstractMojo
 		{
 			File file = artifact.getFile();
 
-			if (file == null)
+			if (file == null || !file.exists())
 			{
 				log.warn("No file for artifact " + artifact);
 				return;
